@@ -8,11 +8,11 @@
 use v5.10;
 use warnings;
 
-print "Exercise 2.5\nString = ";
+print "Exercise 2.5\nEnter a string = ";
 $string = <STDIN>;
-print 'Number = ';
+print 'Enter a number = ';
 chomp($number = <STDIN>);
 
 chomp($result = $string x $number);
-say "Result = \n".$result 
+say "The result is:\n".$result 
 

@@ -9,9 +9,9 @@ use v5.10;
 use warnings;
 
 $pi = 3.141592654;
-print "Exercise 2.2\nRadius = ";
+print "Exercise 2.2\nWhat is the radius? ";
 $radius = <STDIN>;
 chomp($radius);
 $circ = 2*$pi*$radius;
-say 'The circumference of a circle of radius '.$radius.' is '.$circ
+say "The circumference of a circle of radius $radius is $circ"
 

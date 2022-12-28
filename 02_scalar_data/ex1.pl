@@ -12,6 +12,6 @@ $pi = 3.141592654;
 $radius = 12.5;
 $circ = 2*$pi*$radius;
 
-say "Exercise 2.1\nRadius = 12.5\n".
-'The circumference of a circle of radius 12.5 is '.$circ
+say "Exercise 2.1\n".
+"The circumference of a circle of radius $radius is $circ"
 

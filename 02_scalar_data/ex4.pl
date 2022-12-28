@@ -8,11 +8,11 @@
 use v5.10;
 use warnings;
 
-print "Exercise 2.4\nFirst number = ";
+print "Exercise 2.4\nEnter first number: ";
 chomp($n1 = <STDIN>);
 
-print 'Second number = ';
+print 'Enter second number: ';
 chomp($n2 = <STDIN>);
 
-say 'Result = '.$n1*$n2
+say 'The result is: '.$n1*$n2
 
