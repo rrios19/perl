@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+# Perl v5.36.0 on macOS Ventura 13.0.1
+# Learning Perl 8th Edition
+# Author: Ronald Rios
+# Chapter 5: Input and output
+# Exercise 1: Cat reverse implementation (tac)
+
+use v5.10;
+use warnings;
+
+say 'Exercise 5.1';
+
+@lines = reverse <>;
+print @lines
+# Or  print reverse <>;
+
+# Example for running
+# ./tac fred barney betty
+
