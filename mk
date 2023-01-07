@@ -8,10 +8,8 @@ use feature 'say';
 use warnings;
 use strict;
 
-print 'Enter the chapter: ';
-chomp(my $chapter = <STDIN>);
-print 'Enter the name: ';
-chomp(my $name = <STDIN>);
+# Arguments
+my ($chapter, $name) = @ARGV;
 
 my $path;
 my @name = split(/ /, $name);
@@ -20,6 +18,7 @@ foreach (@name){
 }
 $path = "${chapter}_".substr($path, 0, length($path)-1)."/";
 
+my $num = $chapter + 0; 
 system("mkdir $path");
 
 open INPUT, '<', 'base';
@@ -28,8 +27,8 @@ open OUTPUT, '>>', "${path}ex1.pl";
 $name = ucfirst $name;
 foreach (<INPUT>){
     chomp;
-    if (/Chapter/){$_ .= " ${chapter}: $name"}
-    if (/say '/){$_ .= " ${chapter}.1';"}
+    if (/Chapter/){$_ .= " ${num}: $name"}
+    if (/say '/){$_ .= " ${num}.1';"}
     say OUTPUT $_
 }
 
