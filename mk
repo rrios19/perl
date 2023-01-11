@@ -16,7 +16,8 @@ my @name = split(/ /, $name);
 foreach (@name){
     $path .= "${_}_"    
 }
-$path = "${chapter}_".substr($path, 0, length($path)-1)."/";
+chop($path);
+$path = "${chapter}_${path}/";
 
 my $num = $chapter + 0; 
 system("mkdir $path");
