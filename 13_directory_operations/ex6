@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+# Perl v5.36.0 on macOS Ventura 13.0.1
+# Learning Perl 8th Edition
+# Author: Ronald Rios
+# Chapter 13: Directory operations
+# Exercise 6: ln
+
+use feature 'say';
+use warnings;
+use strict;
+use File::Basename;
+use File::Spec;
+
+say 'Exercise 13.6';
+
+my ($old, $new) = @ARGV;
+
+if (-d $new){
+    my $basename = basename $old;
+    $new = File::Spec->catfile($new,$basename)
+}
+
+link $old,$new or die "Can't make link from $old to $new: $!"
+
